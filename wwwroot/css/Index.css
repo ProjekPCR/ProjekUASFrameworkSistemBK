@@ -1,0 +1,119 @@
+﻿/* Gaya khusus untuk landing page Index */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfdfd;
+    /* INFO: Background di gambar memiliki pola. Ganti dengan ini jika Anda punya gambarnya */
+    /* background-image: url('../images/pattern.png'); */
+}
+
+/* === BAGIAN HEADER === */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background-color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.main-nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    padding: 10px 20px;
+    border-radius: 25px; 
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+    /* BARU: Style untuk highlight menu 'Home' yang aktif */
+    .main-nav a.active {
+        background-color: #E3F2F2;
+        color: #005A5A;
+    }
+
+/* === BAGIAN KONTEN UTAMA === */
+.landing-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 60px; /* Padding disesuaikan */
+    min-height: 75vh;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Membuat teks dan gambar align di tengah secara vertikal */
+    justify-content: space-between;
+    gap: 60px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+    /* DISESUAIKAN: Ukuran font diperkecil */
+    .text-content h1 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 72px; /* Ukuran font dikecilkan */
+        color: #2B8B92;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    /* BARU: Style untuk subjudul agar tidak tebal */
+    .text-content .subtitle {
+        font-size: 20px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .text-content p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px; /* Ukuran font paragraf disesuaikan */
+        color: #333;
+        line-height: 1.7;
+    }
+
+/* DISESUAIKAN: Tombol dibuat lebih membulat dengan shadow */
+.btn-getstarted {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    background-color: #64a593;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px; /* Dibuat lebih membulat */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(100, 165, 147, 0.4);
+}
+
+    .btn-getstarted:hover {
+        background-color: #3c7e6e;
+        transform: translateY(-2px);
+        box-shadow: 0px 8px 20px rgba(100, 165, 147, 0.5);
+    }
+
+.image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+    .image-content img {
+        max-width: 450px;
+        height: auto;
+    }

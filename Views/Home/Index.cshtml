@@ -1,8 +1,22 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<link rel="stylesheet" href="~/css/index.css" />
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="landing-section">
+    <div class="container">
+        <div class="text-content">
+            <h1>Welcome</h1>
+            
+            <p class="subtitle">
+                Selamat datang di Sistem Informasi Bimbingan dan Konseling Siswa.
+            </p>
+            <p>
+                Selamat datang di Portal Konseling Siswa!<br />
+                Aplikasi ini membantu proses bimbingan dan konseling menjadi lebih efektif, rapi, dan terdokumentasi dengan baik.
+            </p>
+            
+            <a href="/Account/Login" class="btn-getstarted">Get Started</a>
+        </div>
+        <div class="image-content">
+            <img src="~/images/welcome.png" alt="welcome">
+        </div>
+    </div>
+</section>
