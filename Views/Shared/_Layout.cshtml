@@ -1,5 +1,10 @@
-﻿<!DOCTYPE html>
-<html lang="id">
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	ViewData["Title"] = "BKSmart - Sistem Bimbingan Konseling";
+	Layout = null; // Use this layout for the entire site
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +12,7 @@
     <link rel="stylesheet" href="~/css/layout.css" />
     @RenderSection("Styles", required: false)
 </head>
+
 <body>
     <header class="main-header">
         <div class="logo-area">
@@ -22,14 +28,14 @@
     <main role="main" class="main-content">
         @RenderBody()
     </main>
+</body>
 
     <footer class="footer">
-        <p>© Sistem BK copyright2025</p>
+        <p>© Sistem BK copyright 2025</p>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
-</body>
-</html>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@RenderSection("Scripts", required: false)
+}

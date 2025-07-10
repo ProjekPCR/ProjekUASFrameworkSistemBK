@@ -1,20 +1,26 @@
-﻿/* Gaya khusus untuk landing page Index */
-
+﻿/* === GLOBAL BODY === */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: #fdfdfd;
-    /* INFO: Background di gambar memiliki pola. Ganti dengan ini jika Anda punya gambarnya */
-    /* background-image: url('../images/pattern.png'); */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
-/* === BAGIAN HEADER === */
+/* === MAIN CONTENT WRAPPER === */
+main {
+    flex: 1;
+}
+
+/* === HEADER === */
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 60px;
+    padding: 30px 60px;
     background-color: white;
 }
 
@@ -28,74 +34,79 @@ body {
     text-decoration: none;
     color: #555;
     padding: 10px 20px;
-    border-radius: 25px; 
+    border-radius: 25px;
     font-weight: 500;
     transition: background-color 0.3s ease;
 }
 
-    /* BARU: Style untuk highlight menu 'Home' yang aktif */
     .main-nav a.active {
         background-color: #E3F2F2;
         color: #005A5A;
     }
 
-/* === BAGIAN KONTEN UTAMA === */
+/* === LANDING SECTION === */
 .landing-section {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 80px 60px; /* Padding disesuaikan */
-    min-height: 75vh;
+    padding: 60px 100px;
     box-sizing: border-box;
+    flex: 1;
 }
 
 .container {
     display: flex;
-    align-items: center; /* Membuat teks dan gambar align di tengah secara vertikal */
+    align-items: center;
     justify-content: space-between;
-    gap: 60px;
+    gap: 80px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
 }
 
 .text-content {
     flex: 1;
-    max-width: 550px;
+    max-width: 700px;
+    max-height: 800px;
 }
 
-    /* DISESUAIKAN: Ukuran font diperkecil */
     .text-content h1 {
         font-family: 'Poppins', sans-serif;
-        font-weight: bold;
-        font-size: 72px; /* Ukuran font dikecilkan */
+        font-weight: 800;
+        font-size: 100px;
         color: #2B8B92;
-        margin-top: 0;
+        margin-top: -20px;
         margin-bottom: 15px;
+        margin-left: 30px;
     }
 
-    /* BARU: Style untuk subjudul agar tidak tebal */
     .text-content .subtitle {
-        font-size: 20px;
-        color: #555;
-        line-height: 1.6;
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        color: #818181;
+        line-height: 1.5;
+        font-weight: 800;
+        margin-left: 35px;
+        margin-right: -5px;
     }
 
     .text-content p {
         font-family: 'Poppins', sans-serif;
-        font-size: 18px; /* Ukuran font paragraf disesuaikan */
-        color: #333;
+        font-size: 22px;
+        color: #000000;
         line-height: 1.7;
+        font-weight: 80;
+        margin-left: 35px;
     }
 
-/* DISESUAIKAN: Tombol dibuat lebih membulat dengan shadow */
 .btn-getstarted {
     display: inline-block;
     margin-top: 30px;
+    margin-left: 35px;
     padding: 14px 28px;
-    background-color: #64a593;
+    background-color: #2B8B92;
     color: white;
     text-decoration: none;
-    border-radius: 12px; /* Dibuat lebih membulat */
+    border-radius: 12px;
     font-weight: bold;
     transition: all 0.3s ease;
     box-shadow: 0px 5px 15px rgba(100, 165, 147, 0.4);
@@ -111,9 +122,22 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
+    margin-right: 10px;
 }
 
     .image-content img {
-        max-width: 450px;
+        max-width: 500px;
+        margin-right: -130px;
         height: auto;
     }
+
+/* === FOOTER === */
+.footer {
+    color: #f2f2f2;
+    background-color: #2B8B92;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+}
