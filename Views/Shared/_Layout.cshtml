@@ -3,23 +3,23 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BKSmart</title>
+    <title>@ViewData["Title"] - BKSmart</title>
     <link rel="stylesheet" href="~/css/layout.css" />
-    @await RenderSectionAsync("Styles", required: false)
+    @RenderSection("Styles", required: false)
 </head>
 <body>
     <header class="main-header">
         <div class="logo-area">
-            <img src="~/images/logo.png" alt="logo">
+            <img src="~/images/logo.png" alt="logo" />
         </div>
         <nav class="main-nav">
-            <a asp-controller="Home" asp-action="Index" class="active">Home</a>
+            <a asp-controller="Home" asp-action="Index" class="@(ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")">Home</a>
             <a asp-controller="Home" asp-action="About">About</a>
             <a asp-controller="Home" asp-action="Contact">Contact</a>
         </nav>
     </header>
 
-    <main role="main">
+    <main role="main" class="main-content">
         @RenderBody()
     </main>
 
@@ -30,7 +30,6 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
-    @await RenderSectionAsync("Scripts", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
