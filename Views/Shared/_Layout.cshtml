@@ -21,7 +21,6 @@
         <nav class="main-nav">
             <a asp-controller="Home" asp-action="Index" class="@(ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")">Home</a>
             <a asp-controller="Home" asp-action="About">About</a>
-            <a asp-controller="Home" asp-action="Contact">Contact</a>
         </nav>
     </header>
 
