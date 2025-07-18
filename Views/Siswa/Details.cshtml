@@ -1,57 +1,60 @@
-﻿@model ProjekUASFrameworkSistemBK.Models.Siswa
+﻿@model ProjekUASFrameworkSistemBK.Models.SiswaViewModel
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Details";
 }
 
-<h1>Hapus Data Siswa</h1>
+<h1>Detail Siswa</h1>
 
-<h3>Apakah kamu yakin ingin menghapus data ini?</h3>
 <div>
-    <h4>UserLogin</h4>
+    <h4>Data Siswa</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Nama)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Nama)
         </dd>
-        <dt class="col-sm-2">
+
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.NIS)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.NIS)
         </dd>
-        <dt class="col-sm-2">
+
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Kelas)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Kelas)
         </dd>
-        <dt class="col-sm-2">
+
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.JenisKelamin)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.JenisKelamin)
         </dd>
-        <dt class="col-sm-2">
+
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.Alamat)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.Alamat)
         </dd>
-        <dt class="col-sm-2">
+
+        <dt class="col-sm-3">
             @Html.DisplayNameFor(model => model.NoTelp)
         </dt>
-        <dd class="col-sm-10">
+        <dd class="col-sm-9">
             @Html.DisplayFor(model => model.NoTelp)
         </dd>
     </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Hapus" class="btn btn-danger" /> |
-        <a asp-action="Index" class="btn btn-secondary">Kembali</a>
-    </form>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Kembali</a>
 </div>

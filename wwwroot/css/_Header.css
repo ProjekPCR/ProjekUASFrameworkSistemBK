@@ -26,18 +26,3 @@ main.main-content {
     font-size: 1.5rem;
     font-weight: bold;
 }
-
-.main-nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #555;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
-
-    .main-nav a.active {
-        background-color: #E3F2F2;
-        color: #005A5A;
-    }

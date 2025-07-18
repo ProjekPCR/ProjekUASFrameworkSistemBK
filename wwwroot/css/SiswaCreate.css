@@ -1,0 +1,193 @@
+﻿/* === GLOBAL BODY === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfdfd;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* === MAIN CONTENT WRAPPER === */
+main {
+    flex: 1;
+}
+
+/* HEADER */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 80px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.main-nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    color: #377476;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+    .main-nav a.active,
+    .main-nav a:hover {
+        background-color: #d9f3f2;
+        color: #2f5f5f;
+    }
+
+/* === CONTAINER === */
+.content-wrapper {
+    padding: 1rem 2rem;
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: -25px;
+}
+
+/* === TITLE === */
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* === HEADER ===*/
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    background-color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.main-nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    color: #377476;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+    .main-nav a.active,
+    .main-nav a:hover {
+        background-color: #d9f3f2;
+        color: #2f5f5f;
+    }
+
+/* === FORM STYLING === */
+.form-siswa .form-group {
+    margin-bottom: 1rem;
+}
+
+.form-siswa label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.form-siswa input.form-control,
+.form-siswa select.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 15px;
+    width: 100%;
+    transition: border-color 0.2s ease;
+}
+
+    .form-siswa input.form-control:focus,
+    .form-siswa select.form-control:focus {
+        border-color: #2B7A78;
+        outline: none;
+    }
+
+/* === BUTTONS === */
+.btn-simpan {
+    background-color: #2B8B92;
+    color: white;
+    border: none;
+    padding: 7px 14px;
+    padding-top: 8px;
+    border-radius: 6px;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-simpan:hover {
+        border: none;
+        padding: 7px 14px;
+        padding-top: 8px;
+        border-radius: 6px;
+        font-size: 15px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+    }
+
+.btn-kembali {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-kembali:hover {
+        background-color: #5a6268;
+        border: none;
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-size: 15px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+    }
+
+/* === VALIDATION MESSAGE === */
+.text-danger {
+    font-size: 13px;
+}
+
+/* === FORM BUTTON GROUP === */
+.form-group.d-flex.justify-content-end {
+    gap: 8px;
+}
+
+/* === FOOTER === */
+.footer {
+    background-color: #2B8B92;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+}

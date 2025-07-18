@@ -3,7 +3,7 @@
 }
 
 @section Styles {
-    <link rel="stylesheet" href="~/css/index.css" />
+    <link rel="stylesheet" href="~/css/HomeIndex.css" />
 }
 
 <section class="landing-section">
@@ -17,7 +17,8 @@
                 Selamat datang di Portal Konseling Siswa!<br />
                 Aplikasi ini membantu proses bimbingan dan konseling menjadi lebih efektif, rapi, dan terdokumentasi dengan baik.
             </p>
-            <a href="/Account/Login" class="btn-getstarted">Get Started</a>
+            <a asp-controller="Login" asp-action="Login" class="btn-getstarted">Get Started</a>
+
         </div>
         <div class="image-content">
             <img src="~/images/welcome.png" alt="welcome">

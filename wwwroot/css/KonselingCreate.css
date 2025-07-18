@@ -1,0 +1,122 @@
+﻿/* === GLOBAL STYLING === */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfdfd;
+    margin: 0;
+    padding: 0;
+}
+
+/* === CONTAINER & TITLE === */
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* === FORM STYLING === */
+.form-konseling .form-group {
+    margin-bottom: 0;
+}
+
+.form-konseling label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.form-konseling input.form-control,
+.form-konseling select.form-control,
+.form-konseling textarea.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 15px;
+    width: 100%;
+    transition: border-color 0.2s ease;
+}
+
+    .form-konseling input.form-control:focus,
+    .form-konseling select.form-control:focus,
+    .form-konseling textarea.form-control:focus {
+        border-color: #2B7A78;
+        outline: none;
+    }
+
+/* === SUMMERNOTE FIX: HILANGKAN PANAH GANDA === */
+.note-editor .note-btn .dropdown-toggle::after {
+    display: none !important;
+}
+
+.note-editor .note-dropdown-menu {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Optional: Sesuaikan warna button summernote agar match */
+.note-editor .btn {
+    background-color: #4d9ba6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin: 2px;
+    padding: 6px 10px;
+}
+
+    .note-editor .btn:hover {
+        background-color: #3c7d88;
+    }
+
+/* === BUTTON STYLES === */
+.btn-simpan {
+    background-color: #2B8B92;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.btn-kembali {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* === VALIDATION MESSAGE === */
+.text-danger {
+    font-size: 13px;
+}
+
+/* === BUTTON GROUP === */
+.form-group.d-flex.justify-content-end {
+    gap: 8px;
+    margin-top: 1rem;
+}
+
+/* === FOOTER === */
+.footer {
+    background-color: #2B8B92;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+}

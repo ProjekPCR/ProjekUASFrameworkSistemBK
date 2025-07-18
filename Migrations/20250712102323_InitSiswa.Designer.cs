@@ -11,8 +11,8 @@ using ProjekUASFrameworkSistemBK.Data;
 namespace ProjekUASFrameworkSistemBK.Migrations
 {
     [DbContext(typeof(ProjekUASFrameworkSistemBKContext))]
-    [Migration("20250710141743_AddEmailToUserLogin")]
-    partial class AddEmailToUserLogin
+    [Migration("20250712102323_InitSiswa")]
+    partial class InitSiswa
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,7 @@ namespace ProjekUASFrameworkSistemBK.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ProjekUASFrameworkSistemBK.Models.UserLogin", b =>
+            modelBuilder.Entity("ProjekUASFrameworkSistemBK.Models.SiswaModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -32,21 +32,33 @@ namespace ProjekUASFrameworkSistemBK.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Email")
+                    b.Property<string>("Alamat")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("JenisKelamin")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Username")
+                    b.Property<string>("Kelas")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NIS")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nama")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NoTelp")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserLogin");
+                    b.ToTable("Siswa");
                 });
 #pragma warning restore 612, 618
         }

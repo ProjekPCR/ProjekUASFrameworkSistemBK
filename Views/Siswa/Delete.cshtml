@@ -1,0 +1,46 @@
+﻿@model ProjekUASFrameworkSistemBK.Models.SiswaViewModel
+
+@{
+    ViewData["Title"] = "Hapus Data Siswa";
+    Layout = "~/Views/Shared/_Header.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/SiswaDelete.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+}
+
+<div class="content-wrapper">
+    <h2 class="title">Hapus Data Siswa</h2>
+    <h3 class="subtitle">Apakah kamu yakin ingin menghapus data ini?</h3>
+
+    <div class="row">
+        <div class="col-md-8">
+            <dl class="row">
+                <dt class="col-sm-3"> @Html.DisplayNameFor(model => model.Nama) </dt>
+                <dd class="col-sm-9"> @Html.DisplayFor(model => model.Nama) </dd>
+
+                <dt class="col-sm-3"> @Html.DisplayNameFor(model => model.NIS) </dt>
+                <dd class="col-sm-9"> @Html.DisplayFor(model => model.NIS) </dd>
+
+                <dt class="col-sm-3"> @Html.DisplayNameFor(model => model.Kelas) </dt>
+                <dd class="col-sm-9"> @Html.DisplayFor(model => model.Kelas) </dd>
+
+                <dt class="col-sm-3"> @Html.DisplayNameFor(model => model.JenisKelamin) </dt>
+                <dd class="col-sm-9"> @Html.DisplayFor(model => model.JenisKelamin) </dd>
+
+                <dt class="col-sm-3"> @Html.DisplayNameFor(model => model.Alamat) </dt>
+                <dd class="col-sm-9"> @Html.DisplayFor(model => model.Alamat) </dd>
+
+                <dt class="col-sm-3"> @Html.DisplayNameFor(model => model.NoTelp) </dt>
+                <dd class="col-sm-9"> @Html.DisplayFor(model => model.NoTelp) </dd>
+            </dl>
+
+            <form asp-action="Delete" class="d-flex justify-content-end gap-2 mt-3">
+                <input type="hidden" asp-for="Id" />
+                <input type="submit" value="Hapus" class="btn-delete" />
+                <a asp-action="Index" class="btn-kembali">Kembali</a>
+            </form>
+        </div>
+    </div>
+</div>

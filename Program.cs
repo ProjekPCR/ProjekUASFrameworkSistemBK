@@ -1,5 +1,8 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
 using ProjekUASFrameworkSistemBK.Data;
+
+AppContext.SetSwitch("EPPlus.ExcelPackage.UseNonCommercialLicense", true);
 
 var builder = WebApplication.CreateBuilder(args);
 

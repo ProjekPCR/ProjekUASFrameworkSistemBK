@@ -9,11 +9,13 @@ namespace ProjekUASFrameworkSistemBK.Data
 {
     public class ProjekUASFrameworkSistemBKContext : DbContext
     {
-        public ProjekUASFrameworkSistemBKContext (DbContextOptions<ProjekUASFrameworkSistemBKContext> options)
+        public ProjekUASFrameworkSistemBKContext(DbContextOptions<ProjekUASFrameworkSistemBKContext> options)
             : base(options)
         {
         }
 
-        public DbSet<ProjekUASFrameworkSistemBK.Models.UserLogin> UserLogin { get; set; } = default!;
+        public DbSet<SiswaViewModel> Siswa { get; set; }
+        public DbSet<Konseling> Konseling { get; set; }
+        public DbSet<Registrasi> Registrasi { get; set; } // Tambahkan ini
     }
 }

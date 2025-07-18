@@ -1,0 +1,35 @@
+﻿@model ProjekUASFrameworkSistemBK.Models.KonselingViewModel
+
+@{
+    ViewData["Title"] = "Hapus Catatan Konseling";
+    Layout = "~/Views/Shared/_Header.cshtml";
+}
+
+@section Styles {
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/KonselingDelete.css" />
+}
+
+<div class="container mt-5 mb-5">
+    <h2 class="title mb-3">Konfirmasi Hapus</h2>
+    <hr />
+
+    <p>Apakah kamu yakin ingin menghapus catatan konseling berikut?</p>
+
+    <div class="mb-3">
+        <strong>Nama:</strong> @Model.Nama<br />
+        <strong>NIS:</strong> @Model.NIS<br />
+        <strong>Tanggal:</strong> @Model.Tanggal.ToShortDateString()<br />
+        <strong>Topik:</strong> @Model.Topik<br />
+        <strong>Media:</strong> @Model.Media<br />
+        <strong>Catatan:</strong> @Model.Catatan<br />
+    </div>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn-delete">Hapus</button>
+        <a asp-controller="Konseling" asp-action="Index" class="btn-kembali">Kembali</a>
+    </form>
+</div>

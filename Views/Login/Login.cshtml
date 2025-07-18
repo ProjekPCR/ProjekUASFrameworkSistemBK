@@ -1,0 +1,51 @@
+﻿@model ProjekUASFrameworkSistemBK.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/login.css" />
+}
+
+<div class="login-wrapper">
+    <div class="login-left">
+        <div class="login-form-container">
+            <h2>Login</h2>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger">@ViewBag.Error</div>
+            }
+
+            <form asp-action="Login" asp-controller="Login" method="post">
+                <div class="form-group">
+                    <label asp-for="Username"></label>
+                    <input asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" class="form-control" type="password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn-login">LOGIN</button>
+
+                <div class="form-footer mt-3">
+                    <p>Belum punya akun? <a asp-controller="Registrasi" asp-action="Registrasi">Daftar di sini</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="login-right">
+        <img src="~/images/login.png" alt="Student Image" class="student-image" />
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

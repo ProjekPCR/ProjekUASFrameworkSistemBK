@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/Dashboard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+}
+
+<div class="wrapper">
+    <aside class="sidebar">
+        <h3 class="logo">BKSmart</h3>
+        <div class="profile">
+            <img src="~/images/profile.jpg" alt="foto" />
+            <h5>Guru BK Sekolah</h5>
+        </div>
+        <ul class="menu">
+            <li class="active"><i class="fas fa-home"></i>Dashboard</li>
+            <li class="active"><i class="fas fa-users"></i><a href="/Siswa/Index">Data Siswa</a></li>
+            <li class="active"><i class="fas fa-calendar-check"></i>Konseling</li>
+        </ul>
+        <ul class="menu submenu">
+            <li><a asp-controller="Konseling" asp-action="Create"><i class="fas fa-plus-circle"></i>Tambah</a></li>
+            <li><a asp-controller="Konseling" asp-action="Index"><i class="fas fa-clock-rotate-left"></i>Riwayat</a></li>
+        </ul>
+    </aside>
+
+    <main class="main">
+        <h2 class="page-title">Dashboard</h2>
+
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-header">Jumlah Siswa</div>
+                <div class="stat-value">@ViewBag.JumlahSiswa</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-header">Riwayat Konseling</div>
+                <div class="stat-value">@((ViewBag.RiwayatKonseling as List<ProjekUASFrameworkSistemBK.Models.KonselingViewModel>)?.Count ?? 0)</div>
+            </div>
+        </div>
+
+        <h3 class="sub-title">Riwayat Konseling</h3>
+        <div class="table-responsive">
+            <table class="table-konseling">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>NIS</th>
+                        <th>Tanggal</th>
+                        <th>Topik</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (ViewBag.RiwayatKonseling != null)
+                    {
+                        var no = 1;
+                        foreach (var item in ViewBag.RiwayatKonseling as List<ProjekUASFrameworkSistemBK.Models.KonselingViewModel>)
+                        {
+                            <tr>
+                                <td>@no</td>
+                                <td>@item.Nama</td>
+                                <td>@item.NIS</td>
+                                <td>@item.Tanggal.ToString("dd MMM yyyy")</td>
+                                <td>@item.Topik</td>
+                            </tr>
+                            no++;
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center">Tidak ada data konseling.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>

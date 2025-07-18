@@ -1,0 +1,178 @@
+﻿/* === GLOBAL BODY === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfdfd;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* === MAIN CONTENT WRAPPER === */
+main {
+    flex: 1;
+}
+
+/* === HEADER ===*/
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    background-color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.main-nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+    .main-nav a.active {
+        background-color: #E3F2F2;
+        color: #005A5A;
+    }
+
+/* === CONTAINER === */
+.content-wrapper {
+    padding: 1rem 2rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* === TITLE === */
+.title {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+/* === TOOLBAR === */
+.table-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+    .table-toolbar.justify-content-end {
+        justify-content: flex-end;
+        margin-top: 300px;
+    }
+
+.entries-control label {
+    margin: 0 4px;
+}
+
+/* === DOWNLOAD BUTTON === */
+.btn-unduh-laporan {
+    background-color: #2B8B92;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    padding: 6px 14px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+    .btn-unduh-laporan:hover {
+        background-color: #226764;
+        color: white;
+    }
+
+/* === TABLE === */
+.table-responsive-custom {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+}
+
+.table-riwayat {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+    .table-riwayat th,
+    .table-riwayat td {
+        border: 1px solid #dee2e6;
+        padding: 10px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table-riwayat th {
+        background-color: #f8f9fa;
+        font-weight: 600;
+    }
+
+/* === BUTTON STYLES === */
+.btn-edit {
+    background-color: #2B8B92;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.btn-kembali {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* === TEXT === */
+.text-muted {
+    color: #6c757d;
+}
+
+/* === ICON === */
+i.fas {
+    margin-right: 5px;
+}
+
+/* === ACTION BUTTONS (Edit & Hapus) === */
+.btn-warning, .btn-danger {
+    font-size: 14px;
+    padding: 4px 8px;
+}
+
+    .btn-warning i, .btn-danger i {
+        margin: 0;
+    }
+
+/* === FOOTER === */
+.footer {
+    background-color: #2B8B92;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+}

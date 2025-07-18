@@ -1,0 +1,81 @@
+﻿@model ProjekUASFrameworkSistemBK.Models.KonselingViewModel
+
+@{
+    ViewData["Title"] = "Tambah Catatan Konseling";
+    Layout = "~/Views/Shared/_Header.cshtml";
+}
+
+@section Styles {
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet" />
+    <link href="~/css/KonselingCreate.css" rel="stylesheet" />
+    <style>
+        #editor ~ .note-editor .note-btn.dropdown-toggle::after {
+            display: none !important;
+        }
+    </style>
+}
+
+<div class="container mt-4 mb-5">
+    <h2 class="title mb-4">Tambah Catatan Konseling</h2>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    <form asp-action="Create" method="post" class="form-konseling">
+        <div class="form-group mb-3">
+            <label asp-for="Nama"></label>
+            <input asp-for="Nama" class="form-control" />
+            <span asp-validation-for="Nama" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="NIS"></label>
+            <input asp-for="NIS" class="form-control" />
+            <span asp-validation-for="NIS" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Tanggal"></label>
+            <input asp-for="Tanggal" type="date" class="form-control" />
+            <span asp-validation-for="Tanggal" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Topik"></label>
+            <input asp-for="Topik" class="form-control" />
+            <span asp-validation-for="Topik" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Media"></label>
+            <input asp-for="Media" class="form-control" />
+            <span asp-validation-for="Media" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-4">
+            <label asp-for="Catatan"></label>
+            <textarea asp-for="Catatan" class="form-control" id="editor"></textarea>
+            <span asp-validation-for="Catatan" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mt-3 d-flex justify-content-end gap-2">
+            <button type="submit" class="btn-simpan">Simpan</button>
+            <a asp-controller="Dashboard" asp-action="Index" class="btn-kembali">Kembali</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#editor').summernote({
+                height: 200
+            });
+        });
+    </script>
+}

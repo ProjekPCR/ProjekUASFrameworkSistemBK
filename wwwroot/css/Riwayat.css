@@ -1,0 +1,64 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    margin: 0;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #d0e7e3;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.content {
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.menu a {
+    display: block;
+    margin: 10px 0;
+    color: #333;
+    text-decoration: none;
+}
+
+    .menu a.active {
+        font-weight: bold;
+        background-color: #a7d5cb;
+        padding: 5px;
+        border-radius: 4px;
+    }
+
+.submenu a {
+    display: block;
+    margin-left: 15px;
+    color: #555;
+}
+
+table.riwayat-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    table.riwayat-table th, table.riwayat-table td {
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+.status.selesai {
+    color: green;
+    font-weight: bold;
+}
+
+.status.dijadwalkan {
+    color: orange;
+    font-weight: bold;
+}

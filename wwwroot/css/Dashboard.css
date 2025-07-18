@@ -1,0 +1,207 @@
+﻿:root {
+    --teal-dark: #225B60;
+    --teal: #2B7A78;
+    --teal-soft: #C5E2E1;
+    --sidebar: #C8E0E0;
+    --font-main: 'Segoe UI',sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    background: #fdfdfd;
+}
+
+/* WRAPPER (sidebar + main) */
+.wrapper {
+    display: flex;
+    min-height: 100vh
+}
+
+/* ===== SIDEBAR ================================================== */
+.sidebar {
+    width: 260px;
+    background: var(--sidebar);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    margin: 0 0 2rem;
+    font-size: 26px;
+    color: var(--teal-dark);
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    margin-left: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile h5 {
+    margin: .8rem 0 2rem;
+    font-size: 20px;
+    color: var(--teal-dark);
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+    .menu li, .menu a {
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+        padding: .7rem 2rem;
+        font-size: 18px;
+        color: var(--teal-dark);
+        text-decoration: none;
+    }
+
+        .menu li.active,
+        .menu li:hover {
+            background: #B4D4D4;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+    .menu i {
+        width: 22px;
+        text-align: center;
+    }
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .menu li {
+        margin-bottom: 10px;
+    }
+
+        .menu li a {
+            text-decoration: none;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+/* ===== MAIN AREA =============================================== */
+.main {
+    flex: 1;
+    padding: 2rem 3rem;
+}
+
+.page-title {
+    font-size: 38px;
+    color: var(--teal);
+    margin: 0 0 1.2rem;
+    border-bottom: 3px solid var(--teal-soft);
+    padding-bottom: .5rem;
+}
+
+/* Stat cards */
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0 2rem;
+}
+
+.stat-card {
+    text-align: center;
+    border: 1px solid var(--teal-soft);
+}
+
+.stat-header {
+    background: var(--teal-dark);
+    color: #fff;
+    padding: 1rem 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.stat-value {
+    background: var(--teal-soft);
+    color: var(--teal-dark);
+    padding: 1.8rem 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/* Table riwayat */
+.sub-title {
+    font-size: 24px;
+    margin: 0 0 .6rem;
+    color: var(--teal);
+    border-bottom: 2px solid var(--teal-soft);
+    padding-bottom: .3rem;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table-konseling {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+    .table-konseling th, .table-konseling td {
+        border: 1px solid #dee2e6;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .table-konseling th {
+        background: #f7f9fa;
+        font-weight: 600;
+    }
+
+.status.selesai {
+    color: var(--teal-dark);
+    font-weight: 600;
+}
+
+.status.dijadwal {
+    color: #d49a2b;
+    font-weight: 600;
+}
+
+/*Button Tambah*/
+
+.btn-tambah {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 12px;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+
+/* ========================= Footer (opsional) =================== */
+footer {
+    background: #2B8B92;
+    color: #fff;
+    text-align: center;
+    padding: .8rem 0;
+    font-weight: bold;
+}

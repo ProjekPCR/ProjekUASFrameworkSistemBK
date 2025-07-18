@@ -73,8 +73,9 @@ main {
         font-family: 'Poppins', sans-serif;
         font-weight: 800;
         font-size: 100px;
+        text-align:justify-all;
         color: #2B8B92;
-        margin-top: -20px;
+        margin-top: -50px;
         margin-bottom: 15px;
         margin-left: 30px;
     }
@@ -85,6 +86,7 @@ main {
         color: #818181;
         line-height: 1.5;
         font-weight: 800;
+        text-align: justify-all;
         margin-left: 35px;
         margin-right: -5px;
     }
@@ -100,7 +102,7 @@ main {
 
 .btn-getstarted {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: 35px;
     padding: 14px 28px;
     background-color: #2B8B92;
@@ -143,4 +145,14 @@ main {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* === FOOTER === */
+.footer {
+    background-color: #2B8B92;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
 }

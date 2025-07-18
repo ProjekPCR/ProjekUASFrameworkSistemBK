@@ -1,0 +1,35 @@
+﻿@{
+	ViewData["Title"] = "BKSmart - Sistem Bimbingan Konseling";
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - BKSmart</title>
+	<link rel="stylesheet" href="~/css/_Layout2.css" />
+	@RenderSection("Styles", required: false)
+</head>
+
+<body>
+	<header class="main-header">
+		<div class="logo-area">
+			<img src="~/images/logo.png" alt="logo" />
+		</div>
+	</header>
+	<main role="main" class="main-content">
+		@RenderBody()
+	</main>
+
+	<footer class="footer">
+		<p>BKSmart - Sistem Bimbingan Konseling &copy; 2025</p>
+	</footer>
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@RenderSection("Scripts", required: false)
+</body>
+</html>
